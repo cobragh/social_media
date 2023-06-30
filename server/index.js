@@ -41,7 +41,7 @@ const upload = multer({ storage });
 app.post("/auth/register", upload.single("picture"), register);
 
 // ROUTES
-app.use("/auth/", authRoutes);
+app.use("/auth", authRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 6001;

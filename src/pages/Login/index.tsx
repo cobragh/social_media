@@ -17,7 +17,7 @@ export const Login = () => {
     }
     return(
         <div>
-            <h2>Pagina Fechada</h2>
+            <h2>Login</h2>
             <input type="text" value={email} 
                 onChange={e => setEmail(e.target.value)}
                 placeholder="Digite seu email" 

@@ -11,7 +11,7 @@ export const Login = () => {
     const handleLogin = async () => {
         if(email && password) {
             const isLogged = await auth.signin(email, password);
-            if(isLogged) navigate('/')
+            if(isLogged) navigate('/private')
             else{alert('Not logged in')}
         }
     }

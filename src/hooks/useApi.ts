@@ -11,11 +11,12 @@ export const useApi = () => ({
     },
     signin: async(email: string, password: string) => {
         const response = await api.post('/auth/login', {email, password})
-        console.log({email, password});
-        
         return response.data;
     }, 
-
+    register: async(firstName: string, lastName: string, password: string, email: string) => {
+        const response = await api.post('/auth/register', {firstName, lastName, password, email});
+        return response.data;
+    },
     logout: async ()=>{
         const response = await api.post('/logout')
         return response.data;
